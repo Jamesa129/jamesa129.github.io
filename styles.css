@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#fix {
+    /* width: 100vw;
+    height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image:url("backdrop2.png");
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+}
+
+#backdrop {
+
+    width: 1000px;
+    height: 270px;
+    background: yellowgreen;
+    border: solid 2px blue;
+    background-image: url(backdrop3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: translate(0%, -130%);  */
+    z-index: 5;
+}
+
+/* Roads 1-3 */
+#canvas1 {
+    width: 400px;
+    height: 699px;
+    border: 2px solid black;
+    background-image: url(Road2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(0%, -100%);
+
+}
+
+#canvas2 {
+    width: 400px;
+    height: 699px;
+    background-image: url(RoadR.png);
+    border: 2px solid black;
+    transform: translate(100%, -200.8%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#canvas3 {
+    width: 400px;
+    height: 699px;
+    background-image: url(RoadL.png);
+    border: 2px solid black;
+    transform: translate(-100%, -301.6%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* canvas center road */
+#road{
+    width: 400px;
+    height: 699px;
+    background: purple;
+    border: solid 2px red;
+    background-image: url(Road2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* #road-canvas{
+    justify-content: center;
+    align-items: center;
+} */
+
+.player {
+    height: 120px;
+    width: 120px;
+    border-radius: 20%;
+    background-color: blue;
+    background-image: url(Car-sprite.PNG);
+    z-index: 2;
+    transform: translate(935%, 705%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* .roadImg {
+} */
+
+
+/* inherit, contain, fill,auto,cover */
