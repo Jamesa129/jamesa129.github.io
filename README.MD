@@ -1,4 +1,6 @@
 Deployed on GitHub pages, Netlify, and Heroku
+https://github.com/Jamesa129/jamesa129.github.io
+https://fanciful-quokka-1a2477.netlify.app/
  
 Technologies: HTML5,CSS, JS , CANVAS , Functions, Event Listeners
  
