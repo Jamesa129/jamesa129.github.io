@@ -5,8 +5,7 @@
 }
 
 #fix {
-    /* width: 100vw;
-    height: 100vh; */
+    height: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +13,10 @@
     background-image:url("backdrop2.png");
     /* background-repeat: no-repeat; */
     background-size: contain;
+    flex-wrap: wrap;
 }
 
 #backdrop {
-
     width: 1000px;
     height: 270px;
     background: yellowgreen;
@@ -27,50 +26,45 @@
     background-size: cover;
     /* transform: translate(0%, -130%);  */
     z-index: 5;
+    
 }
-
+#AllCanvasRoads{
+    display: flex;
+}
 /* Roads 1-3 */
 #canvas1 {
     width: 400px;
     height: 699px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     background-image: url(Road2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    transform: translate(0%, -100%);
+  
 
 }
-
 #canvas2 {
     width: 400px;
     height: 699px;
-    background-image: url(RoadR.png);
-    border: 2px solid black;
-    transform: translate(100%, -200.8%);
+    background-image: url(RoadL.png);
+    /* border: 2px solid black; */
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 #canvas3 {
     width: 400px;
     height: 699px;
-    background-image: url(RoadL.png);
-    border: 2px solid black;
-    transform: translate(-100%, -301.6%);
+    background-image: url(RoadR.png);
+    /* border: 2px solid black; */
     background-repeat: no-repeat;
     background-size: cover;
 }
 /* canvas center road */
-#road{
-    width: 400px;
-    height: 699px;
-    background: purple;
-    border: solid 2px red;
-    background-image: url(Road2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
+#Roads{
+    display: flex;
+    height: 699px;
+    flex-wrap: wrap;
+    }
 
 
 /* #road-canvas{
@@ -78,7 +72,7 @@
     align-items: center;
 } */
 
-.player {
+/* .player {
     height: 120px;
     width: 120px;
     border-radius: 20%;
@@ -88,7 +82,7 @@
     transform: translate(935%, 705%);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 
 /* .roadImg {
