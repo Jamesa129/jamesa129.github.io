@@ -107,9 +107,9 @@ class rock {
         /* update test*/
         
         this.y += this.speed;
-        // const distanceX = this.x -player.x;
-        // const distanceY = this.y -player.y
-        // this.distance =Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        const distanceX = this.x -Car1.X;
+        const distanceY = this.y -Car1.Y
+        this.distance =Math.sqrt(distanceX * distanceX + distanceY * distanceY);
     }
     draw(){
         // context.fillStyle = "teal";
@@ -117,8 +117,8 @@ class rock {
         context.arc(this.x, this.y, this.radius,0,Math.PI * 2);
         // context.fill();
         context.closePath();
-        context.stroke();
-        // context.drawImage(rockImage,this.x-35, this.y-47.01, this.radius * 3,this.radius*3);
+        // context.stroke();
+        context.drawImage(rockImage,this.x-35, this.y-47.01, this.radius * 3,this.radius*3);
     }
 }
 function workingRocks(){
@@ -358,22 +358,23 @@ let testrock ={X:-100,Y:400, width:200, height:250}
 
 function getCollision()
 {
-console.log('hello') 
-for(let i = 0;i >0; i++){
-    console.log('test')
-if(Car1.X > rockArray[0].x + rockArray[0].radius ||
-    Car1.X + Car1.width < rockArray[0].x -  rockArray[0].radius ||
-    Car1.Y >  rockArray[0].y +  rockArray[0].radius ||
-    Car1.Y + Car1.height <  rockArray[0].y -  rockArray[0].radius
+// console.log('hello') 
+for(let i = 0;i < rockArray.length; i++){
+    // console.log('test')
+if(Car1.X > rockArray[i].x + rockArray[i].radius ||
+    Car1.X + Car1.width < rockArray[i].x -  rockArray[i].radius ||
+    Car1.Y >  rockArray[i].y +  rockArray[i].radius ||
+    Car1.Y + Car1.height <  rockArray[i].y -  rockArray[i].radius
     ){
-       
+        // console.log("no hit")
+     return true  
     }else {
-        console.log("hit")
+        return false
     }
-}
+    
 }
 
-
+}
 
     let img = new Image();
     
@@ -459,14 +460,13 @@ function animate(){
     context2.fillText('Score:       ' +gameFrame/100+ score,10,10);
     context2.fillStyle = "black";
     gameFrame++;
-
-    context.fillRect(testrock.X,testrock.Y,testrock.width,testrock.height)
+    // context.fillRect(testrock.X,testrock.Y,testrock.width,testrock.height)
     getCollision()
-    
-    context.fillRect(Car1.X,Car1.Y,82,144)
-    requestAnimationFrame(animate);
-    window.requestAnimationFrame(gameLoop);
+    // context.fillRect(Car1.X,Car1.Y,82,144)
+    if(getCollision()){
+        requestAnimationFrame(animate);}
 
+    window.requestAnimationFrame(gameLoop)
 }
 animate();
 
