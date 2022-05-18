@@ -15,6 +15,6 @@ Remaking css several times to fit on page how I wanted it. I went from grid to f
 Wants:I wanted more responsiveness on the site. More buttons. More canvas.
 Pause Menu. Reset
  
- Unsolved Problems:
+ Unsolved Problems: The first rock is the only rock that ends the game and has collision
  <!-- pending -->
  
